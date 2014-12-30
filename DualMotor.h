@@ -20,19 +20,19 @@ public:
 
     DualMotor();
 
-    void M1move(int velocidade, int sentido);
+    void M1move(byte speed, bool sense);
     void M1stop();
-    void M2move(int velocidade, int sentido);
+    void M2move(byte speed, bool sense);
     void M2stop();
     
 private:
 
     int pwmPinM1;
-    int sentidoPinM1;
-	int sentido2PinM1;
+    int sensePinM1;
+	int sense2PinM1;
 	int pwmPinM2;
-	int sentidoPinM2;
-	int sentido2PinM2;
+	int sensePinM2;
+	int sense2PinM2;
 };
 
 #endif
