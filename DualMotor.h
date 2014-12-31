@@ -20,9 +20,9 @@ public:
 
     DualMotor();
 
-    void M1move(byte speed, bool sense);
+    void M1move(byte speed, byte sense);
     void M1stop();
-    void M2move(byte speed, bool sense);
+    void M2move(byte speed, byte sense);
     void M2stop();
     
 private:

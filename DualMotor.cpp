@@ -14,10 +14,10 @@
 
 DualMotor::DualMotor()
 {
-	pwmPinM1=5;
+	pwmPinM1=3;
     sensePinM1=7;
 	sense2PinM1=8;
-	pwmPinM2=6;
+	pwmPinM2=11;
 	sensePinM2=9;
 	sense2PinM2=10;
 	 
@@ -29,7 +29,7 @@ DualMotor::DualMotor()
 	pinMode(sense2PinM2, OUTPUT);
 }
 
-void DualMotor::M1move(byte speed, bool sense)
+void DualMotor::M1move(byte speed, byte sense)
 {
 	analogWrite(pwmPinM1, speed);
 	if (sense == 0)
@@ -49,7 +49,7 @@ void DualMotor::M1stop()
     analogWrite(pwmPinM1, 0);
 }
 
-void DualMotor::M2move(byte speed, bool sense)
+void DualMotor::M2move(byte speed, byte sense)
 {
 	analogWrite(pwmPinM2, speed);
     if (sense == 0)
